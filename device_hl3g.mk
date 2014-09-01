@@ -15,7 +15,10 @@ else
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    $(LOCAL_KERNEL):kernel \
+	device/samsung/hl3g/init.universal5260.rc:root/init.universal5260.rc \
+        device/samsung/hl3g/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
+	device/samsung/hl3g/ueventd.universal5260.rc:root/ueventd.universal5260.rc \
 
 $(call inherit-product, build/target/product/full.mk)
 
