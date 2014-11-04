@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
         device/samsung/hl3g/init.universal5260.usb.rc:root/init.universal5260.usb.rc \
 	device/samsung/hl3g/ueventd.universal5260.rc:root/ueventd.universal5260.rc \
 
+# TWRP
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
